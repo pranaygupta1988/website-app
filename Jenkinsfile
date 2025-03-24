@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Build the image"){
          steps{
-           sh "docker image build -t pranaygupta1088/website-app:${BUILD_NUMBER} ."
+           sh "docker image build -t pranaygupta1988/website-app:${BUILD_NUMBER} ."
             }
         }
         stage("Push the image"){
