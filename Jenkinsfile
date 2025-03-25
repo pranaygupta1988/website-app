@@ -4,6 +4,12 @@ pipeline{
         SHELL= "/bin/bash"
     }
     stages{
+        stage("Update Sonarqube report"){
+            steps{
+                sh "EXPORT PATH=$PATH:/var/lib/sonar-scanner/bin"
+                sh "sonar-scanner -Dsonar.projectKey=website-app1 -Dsonar.sources=. -Dsonar.host.url=http://172.16.107.148:9000 -Dsonar.login=sqp_bcb3cab95839b2273355f682b6f8acde9c75505a"
+            }
+        }
         stage("Build the image"){
          steps{
            sh "docker image build -t pranaygupta1988/website-app:${BUILD_NUMBER} ."

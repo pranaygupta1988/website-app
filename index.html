@@ -3,35 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website v1.1</title>
+    <title>Document</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: #f4f4f4;
-      }
       h1 {
         text-align: center;
-        margin: 20px 0;
-        color: purple; /* 🔴 Added red color */
-      }
-      div {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        line-height: 1.6;
+        margin: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>Website v1.1</h1>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ut, nobis repellendus, impedit eveniet beatae qui voluptatum temporibus earum aliquid aperiam facere placeat corporis explicabo nemo dignissimos, eius doloremque itaque!
+    <h1>Website v1.0</h1>
+    <div id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ut,
+      nobis repellendus, impedit eveniet beatae qui voluptatum temporibus earum
+      aliquid aperiam facere placeat corporis explicabo nemo dignissimos, eius
+      doloremque itaque!
     </div>
+
+    <script>
+      // Bad practice: Unused variable
+      var unusedVar = "This variable is never used";
+
+      // Bad practice: Using var instead of let/const
+      var message = "Hello, world!";
+
+      // Bad practice: Console log left in production
+      console.log("Debugging message: " + message);
+
+      // Bad practice: Inefficient loop
+      var numbers = [1, 2, 3, 4, 5];
+      for (var i = 0; i < numbers.length; i++) {
+        console.log("Number:", numbers[i]);
+      }
+
+      // Bad practice: Direct DOM manipulation instead of using a framework
+      document.getElementById("content").innerHTML += "<p>Extra Content Added</p>";
+    </script>
   </body>
 </html>
 
