@@ -6,7 +6,8 @@ pipeline{
     stages{
         stage("Update Sonarqube report"){
             steps{
-                sh "export PATH=$PATH:/var/lib/sonar-scanner/bin"
+                sh "export PATH=$PATH:/var/lib/sonar-scanner/bin && sonar-scanner -Dsonar.projectKey=website-app1 -Dsonar.sources=. -Dsonar.host.url=http://172.16.107.148:9000 -Dsonar.login=sqp_bcb3cab95839b2273355f682b6f8acde9c75505a"
+
                 sh "/var/lib/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=website-app1 -Dsonar.sources=. -Dsonar.host.url=http://172.16.107.148:9000 -Dsonar.login=sqp_bcb3cab95839b2273355f682b6f8acde9c75505a -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml"
             }
         }
