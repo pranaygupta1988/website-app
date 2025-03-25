@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: webcon
-          image: pranaygupta1988/website-app:36
+          image: pranaygupta1988/website-app:37
           ports:
             - containerPort: 80
               protocol: TCP
