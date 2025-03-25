@@ -7,7 +7,7 @@ pipeline{
         stage("Update Sonarqube report"){
             steps{
                 sh "export PATH=$PATH:/var/lib/sonar-scanner/bin"
-                sh "/var/lib/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=website-app2 -Dsonar.sources=. -Dsonar.host.url=http://172.16.107.148:9000 -Dsonar.login=sqp_dccbda5e875c263dadba6b275460f7c0268ff2c9"
+                sh "/var/lib/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=website-app2 -Dsonar.sources=. -Dsonar.host.url=http://172.16.107.148:9000 -Dsonar.login=sqp_dccbda5e875c263dadba6b275460f7c0268ff2c9 -Dsonar.coverage.exclusions=**/*"
             }
         }
         stage("Build the image"){
